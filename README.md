@@ -1,5 +1,8 @@
 # NanoPaint
 
-Aplikacja bêd¹ uproszczona wersj¹ edytora graficznego.
-Konsola po lewej stronie informuje o wszystkich wykonanych czynnoœciach.
-Wykonany obrazek mo¿na zapisaæ do pliku.
+Aplikacja bÄ™dÄ… uproszczona wersjÄ… edytora graficznego.\
+Konsola po lewej stronie informuje o wszystkich wykonanych czynnoÅ›ciach.\
+Wykonany obrazek moÅ¼na zapisaÄ‡ do pliku.\
+
+![Screenshot1](Dokumentacja/s1.png)
+![Screenshot2](Dokumentacja/s2.png)
