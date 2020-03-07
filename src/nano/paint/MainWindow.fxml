@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainStackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nano.paint.controllers.MainController">
+   <children>
+      <Pane fx:id="mainBoard" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #e8e8e8;" StackPane.alignment="BOTTOM_RIGHT" />
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" StackPane.alignment="BOTTOM_LEFT">
+         <children>
+            <TextArea fx:id="consoleTextArea" editable="false" focusTraversable="false" prefHeight="500.0" prefWidth="300.0" style="-fx-border-width: 0 5px 0 0; -fx-border-color: #9b9b9b; -fx-border-style: solid; -fx-background-color: white;" wrapText="true">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </TextArea>
+         </children></Pane>
+      <MenuBar prefHeight="26.0" StackPane.alignment="TOP_CENTER">
+          <menus>
+              <Menu mnemonicParsing="false" text="Plik">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onNew" text="Nowy" />
+                      <MenuItem mnemonicParsing="false" onAction="#onOpenFile" text="Otwórz..." />
+                      <MenuItem mnemonicParsing="false" onAction="#onSaveFile" text="Zapisz..." />
+                      <SeparatorMenuItem mnemonicParsing="false" />
+                      <MenuItem mnemonicParsing="false" onAction="#onClose" text="Zakończ" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edytuj">
+                  <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onResize" text="Zmień rozmiar" />
+                  <MenuItem mnemonicParsing="false" onAction="#onShowColorPicker" text="Zmień kolor" />
+                  <MenuItem mnemonicParsing="false" onAction="#onRemove" text="Usuń zaznaczone" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onFocusAll" text="Zaznacz wszystko" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClearFocus" text="Odznacz wszystko" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClearConsole" text="Wyczyść konsolę" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Wstaw">
+                  <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onRectangleMode" text="Prostokąt" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCircleMode" text="Koło" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#onPolygonMode" text="Wielokąt" />
+                  </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Pomoc">
+                  <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onAbout" text="Informacje" />
+                  </items>
+              </Menu>
+          </menus>
+      </MenuBar>
+      <ColorPicker fx:id="colorPicker" onAction="#onColorChanged" translateX="-300.0" translateY="-250.0" visible="false" />
+   </children>
+</StackPane>
